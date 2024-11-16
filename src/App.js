@@ -10,6 +10,7 @@ import  Private from "./Componets/core/Private"
 import MyProfile from "./page/MyProfile"
 import  MyCourses from "./Componets/core/deskboard/MyCourses"
 import CarAdd from './page/CarAdd';
+import Pubic_page from './page/Pubic_page'
 
 function App() {
   return (
@@ -20,7 +21,14 @@ function App() {
         {/* <Route path="/" element={<Home />} /> */}
         {/* <Route path="catalog/:catalogName" element={<Catalog />} /> */}
         {/* <Route path="courses/:courseId" element={<CourseDetails />} /> */}
-
+        <Route
+          path="catalog"
+          element={
+            
+              <Pubic_page/>
+            
+          }
+        />
         
         <Route
           path="signup"
@@ -38,6 +46,7 @@ function App() {
             </OpenRoute>
           }
         />
+       
 
         <Route
           element={
