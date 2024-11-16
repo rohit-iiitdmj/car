@@ -61,7 +61,7 @@ const CarAdd = () => {
     console.log("FormData being sent:", [...data]);
   
     try {
-      const response = await axios.post("http://localhost:4000/api/v1/auth/addCar", data, {
+      const response = await axios.post("https://car-t4vz.onrender.com/api/v1/auth/addCar", data, {
         headers: {
           "Content-Type": "multipart/form-data",
           Authorization: `Bearer ${token}`,
@@ -87,7 +87,7 @@ const CarAdd = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="max-full  mx-auto   bg-richblack-700 shadow-md rounded-lg p-6 space-y-4"
+      className="max-full  mx-auto       bg-richblack-700 shadow-md rounded-lg p-6 space-y-4"
     >
       <div>
         <label className="block text-gray-700 text-richblack-300 font-medium">Title</label>
@@ -97,7 +97,7 @@ const CarAdd = () => {
           name="title"
           value={formData.title}
           onChange={handleChange}
-          className="w-full border border-gray-300 rounded-md text-pure-greys-25 bg-richblack-800 p-2 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full border border-gray-300 rounded-md shadow-md text-richblack-200 bg-richblack-800 p-2 mt-1 focus:outline-none focus:ring-2  focus:ring-richblack-800"
           required
         />
       </div>
@@ -107,7 +107,7 @@ const CarAdd = () => {
           name="description"
           value={formData.description}
           onChange={handleChange}
-          className="w-full border border-gray-300 text-rich rounded-md bg-richblack-800 p-2 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full border border-gray-300  text-richblack-200 rounded-md bg-richblack-800 p-2 mt-1 focus:ring-richblack-800"
         />
       </div>
       <div>
@@ -117,7 +117,7 @@ const CarAdd = () => {
           name="tags.carType"
           value={formData.tags.carType}
           onChange={handleChange}
-          className="w-full border border-gray-300 bg-richblack-800 text-richblack-300 rounded-md p-2 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full border border-gray-300 bg-richblack-800 text-richblack-300 rounded-md p-2 mt-1 focus:outline-none focus:ring-2 focus:ring-richblack-800"
         />
       </div>
       <div>
@@ -127,7 +127,7 @@ const CarAdd = () => {
           name="tags.company"
           value={formData.tags.company}
           onChange={handleChange}
-          className="w-full border border-gray-300 bg-richblack-800 text-richblack-300 rounded-md p-2 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full border border-gray-300 bg-richblack-800 text-richblack-300 rounded-md p-2 mt-1 focus:outline-none focus:ring-2 focus:ring-richblack-800"
         />
       </div>
       <div>
@@ -137,7 +137,7 @@ const CarAdd = () => {
           name="tags.dealer"
           value={formData.tags.dealer}
           onChange={handleChange}
-          className="w-full border border-gray-300 text-richblack-300 bg-richblack-800 rounded-md p-2 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full border border-gray-300 text-richblack-300 bg-richblack-800 rounded-md p-2 mt-1 focus:outline-none focus:ring-2 focus:ring-richblack-800"
         />
       </div>
       <div>
@@ -147,7 +147,7 @@ const CarAdd = () => {
           multiple
           accept="image/*"
           onChange={handleImageChange}
-          className="w-full border border-gray-300 text-richblack-300 bg-richblack-800 rounded-md p-2 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full border border-gray-300 text-richblack-300 bg-richblack-800 rounded-md p-2 mt-1 focus:outline-none focus:ring-2 focus:ring-richblack-800"
         />
         <div className="mt-2 space-y-1">
           {imageFiles.map((file, idx) => (

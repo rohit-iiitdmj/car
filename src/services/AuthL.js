@@ -26,7 +26,7 @@ export function signUp(
       dispatch(setLoading(true))
       try {
         console.log("hii1")
-        const response = await apiConnector("POST", "http://localhost:4000/api/v1/auth/signup",  {
+        const response = await apiConnector("POST", "https://car-t4vz.onrender.com/api/v1/auth/signup",  {
         
           Name,
           LastName,
@@ -73,7 +73,7 @@ export function signUp(
       const toastId = toast.loading("Loading...")
       dispatch(setLoading(true))
       try {
-        const response = await apiConnector("POST", "http://localhost:4000/api/v1/auth/login", {
+        const response = await apiConnector("POST", "https://car-t4vz.onrender.com/api/v1/auth/login", {
           email,
           password,
         })
@@ -123,7 +123,7 @@ export function signUp(
     try {
       const response = await apiConnector(
         "GET",
-        "http://localhost:4000/api/v1/auth/getUserProducts",
+        "https://car-t4vz.onrender.com/api/v1/auth/getUserProducts",
         null,
         {
           Authorization: `Bearer ${token}`,
@@ -147,7 +147,7 @@ export function signUp(
   export const deleteCourse = async (data, token) => {
     const toastId = toast.loading("Loading...")
     try {
-      const response = await apiConnector("DELETE", `http://localhost:4000/api/v1/auth/deleteCar`, data, {
+      const response = await apiConnector("DELETE", `https://car-t4vz.onrender.com/api/v1/auth/deleteCar`, data, {
         Authorization: `Bearer ${token}`,
       })
       console.log(data);
@@ -175,7 +175,7 @@ export const addProductDetails = createAsyncThunk(
   async ({ data, token }, { rejectWithValue }) => {
     try {
      
-      const response = await apiConnector('POST', 'http://localhost:4000/api/v1/auth/addCar', data, {
+      const response = await apiConnector('POST', 'https://car-t4vz.onrender.com/api/v1/auth/addCar', data, {
         'Content-Type': 'multipart/form-data',
         Authorization: `Bearer ${token}`,
       });
@@ -198,7 +198,7 @@ export const editProductDetails = async (data, token) => {
   let result = null
   const toastId = toast.loading("Loading...")
   try {
-    const response = await apiConnector("POST", "", data, {
+    const response = await apiConnector("POST", "https://car-t4vz.onrender.com/", data, {
       "Content-Type": "multipart/form-data",
       Authorization: `Bearer ${token}`,
     })
