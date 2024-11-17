@@ -11,7 +11,7 @@ exports.addCar = async (req, res) => {
     // Get all required fields from request body
     const { title, description, tags: _tags } = req.body;
     console.log(title,description, tags);
-    carType,company,dealer
+    
    
     // Get images from request files
     const images = Array.isArray(req.files.images) ? req.files.images : [req.files.images];
