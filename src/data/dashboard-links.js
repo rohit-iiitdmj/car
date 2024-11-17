@@ -6,48 +6,42 @@ export const sidebarLinks = [
     path: "/dashboard/my-profile",
     icon: "VscAccount",
   },
+ 
   {
     id: 2,
-    name: "Dashboard",
-    path: "/dashboard/instructor",
-    
-    icon: "VscDashboard",
-  },
-  {
-    id: 3,
-    name: "My Courses",
-    path: "/dashboard/my-courses",
+    name: "My Car",
+    path: "/dashboard/my-vehicle",
    
     icon: "VscVm",
   },
   {
-    id: 4,
-    name: "Add Course",
-    path: "/dashboard/add-course",
+    id: 3,
+    name: "Add vehicle",
+    path: "/dashboard/add-vehicle",
    
     icon: "VscAdd",
   },
-  {
-    id: 5,
-    name: "Enrolled Courses",
-    path: "/dashboard/enrolled-courses",
+  // {
+  //   id: 5,
+  //   name: "Enrolled Courses",
+  //   path: "/dashboard/enrolled-courses",
     
-    icon: "VscMortarBoard",
-  },
-  {
-    id: 6,
-    name: "Purchase History",
-    path: "/dashboard/purchase-history",
+  //   icon: "VscMortarBoard",
+  // },
+  // {
+  //   id: 6,
+  //   name: "Purchase History",
+  //   path: "/dashboard/purchase-history",
    
-    icon: "VscHistory",
-  },
-  {
-    id: 6,
-    name: "Create Category",
-    path: "/dashboard/Category",
+  //   icon: "VscHistory",
+  // },
+  // {
+  //   id: 6,
+  //   name: "Create Category",
+  //   path: "/dashboard/Category",
     
-    icon: "VscDiffAdded",
-  },
+  //   icon: "VscDiffAdded",
+  // },
 
 
 ];

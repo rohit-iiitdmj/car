@@ -56,8 +56,8 @@ function App() {
           }
         >
          <Route path="dashboard/my-profile" element={<MyProfile />} />
-         <Route path="dashboard/my-courses" element={<MyCourses />}/>
-         <Route path="dashboard/add-course" element={<CarAdd />}/>
+         <Route path="dashboard/my-vehicle" element={<MyCourses />}/>
+         <Route path="dashboard/add-vehicle" element={<CarAdd />}/>
 
 
         </Route>

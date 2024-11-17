@@ -4,7 +4,7 @@ import { BsChevronDown } from "react-icons/bs";
 import { useSelector } from "react-redux";
 import { Link, matchPath, useLocation } from "react-router-dom";
 
-import logo from "../../assets/logo/profile-pic (19).png";
+import logo from "../../assets/logo/Spyne+Logo+black.webp";
 import { NavbarLinks } from "../../data/Navlink";
 import { apiConnector } from "../../services/apiconnect";
 // import { categories } from "../../services/apis";
@@ -62,11 +62,11 @@ function Navbar() {
             {/* Logo */}
             <Link to="/">
               <img
-                 className="   "
+                 className="   bg-richblack-5 rounded-xl shadow-md  "
                 src={logo}
                 alt="Logo"
-                width={50}
-                height={32}
+                width={100}
+                height={50}
                 loading="lazy"
               />
             </Link>

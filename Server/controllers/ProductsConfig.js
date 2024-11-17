@@ -10,13 +10,15 @@ exports.addCar = async (req, res) => {
 
     // Get all required fields from request body
     const { title, description, tags: _tags } = req.body;
-    console.log(title,description,)
-
+    console.log(title,description, tags);
+    carType,company,dealer
+   
     // Get images from request files
     const images = Array.isArray(req.files.images) ? req.files.images : [req.files.images];
 
     // Convert tags from stringified array to array
     const tags = JSON.parse(_tags || "[]");
+    console.log(tags);
 
     // Validate required fields
     if (!title || !description ) {

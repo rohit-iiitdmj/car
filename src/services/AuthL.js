@@ -215,3 +215,39 @@ export const editProductDetails = async (data, token) => {
   toast.dismiss(toastId)
   return result
 }
+export const getAllCarsPublic = async () => {
+  let result = null;
+  const toastId = toast.loading("Loading...");
+
+  try {
+    const response = await apiConnector(
+      "GET",
+      "https://car-t4vz.onrender.com/api/v1/auth/getAllCarsPublic"
+    );
+
+    // console.log("GET ALL Details CAR API RESPONSE............", response);
+
+    // Check for a valid response
+    if (response?.data?.success) {
+      toast.success("GET ALL Details CAR Successfully");
+      result = response?.data?.data; // Assign data to result
+    } else {
+      throw new Error(response?.data?.message || "Could Not GET ALL CAR Details");
+    }
+  } catch (error) {
+    console.log("GET ALL Details CAR ERROR............", error);
+
+    // Show a meaningful error message
+    toast.error(error.response?.data?.message || error.message || "An error occurred");
+  } finally {
+    toast.dismiss(toastId); // Dismiss the loading toast in all cases
+  }
+  /* The `console.log(result);` statement is logging the value of the `result` variable to the console.
+  This is typically used for debugging purposes to see the output or value of a variable at a
+  specific point in the code execution. In this case, it is logging the result of the API call to
+  retrieve all car details in the `getAllCarsPublic` function. This can help in verifying the data
+  received from the API and checking if the API call was successful. */
+  // console.log(result);
+
+  return result;
+};
