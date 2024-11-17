@@ -9,10 +9,10 @@ const CarAdd = () => {
   const [formData, setFormData] = useState({
     title: '',
     description: '',
+    carType: '',
+    company: '',
+    dealer: '',
     tags: {
-      carType: '',
-      company: '',
-      dealer: '',
       otherTags: [],
     },
     images: [],
