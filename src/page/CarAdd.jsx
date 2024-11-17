@@ -49,9 +49,9 @@ const CarAdd = () => {
     const data = new FormData();
     data.append("title", formData.title);
     data.append("description", formData.description);
-    data.append("tags[carType]", formData.tags.carType);
-    data.append("tags[company]", formData.tags.company);
-    data.append("tags[dealer]", formData.tags.dealer);
+    data.append("carType", formData.tags.carType);
+    data.append("company", formData.tags.company);
+    data.append("dealer", formData.tags.dealer);
     formData.tags.otherTags.forEach((tag, idx) =>
       data.append(`tags[otherTags][${idx}]`, tag)
     );

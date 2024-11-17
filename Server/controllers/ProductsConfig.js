@@ -10,13 +10,13 @@ exports.addCar = async (req, res) => {
     const userId = req.user.id;
 
     // Get all required fields from request body
-    const { title, description} = req.body;
-     tags = {
-      carType: req.body['tags[carType]'] || null,
-      company: req.body['tags[company]'] || null,
-      dealer: req.body['tags[dealer]'] || null,
-    };
-    console.log(title,description,tags)
+    const { title, description,company,carType,dealer} = req.body;
+    //  tags = {
+    //   carType: req.body['tags[carType]'] || null,
+    //   company: req.body['tags[company]'] || null,
+    //   dealer: req.body['tags[dealer]'] || null,
+    // };
+    // console.log(title,description,tags)
 
     // Get images from request files
     const images = Array.isArray(req.files.images) ? req.files.images : [req.files.images];
@@ -61,6 +61,9 @@ exports.addCar = async (req, res) => {
       userId: userDetails._id,
       title,
       description,
+      company,
+      carType,
+      dealer,
       tags,
       images: imageUrls, // Use URLs from Cloudinary
     });
