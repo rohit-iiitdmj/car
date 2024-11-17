@@ -4,19 +4,25 @@ const AuditLog = require("../models/AuditLog");
 const {uploadImageToCloudinary }= require("../Utils/uploadImage"); 
 
 exports.addCar = async (req, res) => {
+  const tags=null;
   try {
     // Get user ID from request object
     const userId = req.user.id;
 
     // Get all required fields from request body
-    const { title, description, tags: _tags } = req.body;
-    console.log(title,description,)
+    const { title, description} = req.body;
+     tags = {
+      carType: req.body['tags[carType]'] || null,
+      company: req.body['tags[company]'] || null,
+      dealer: req.body['tags[dealer]'] || null,
+    };
+    console.log(title,description,tags)
 
     // Get images from request files
     const images = Array.isArray(req.files.images) ? req.files.images : [req.files.images];
 
     // Convert tags from stringified array to array
-    const tags = JSON.parse(_tags || "[]");
+    // const tags = JSON.parse(_tags || "[]");
 
     // Validate required fields
     if (!title || !description ) {

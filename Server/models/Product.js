@@ -8,7 +8,7 @@ const productSchema = new mongoose.Schema({
     carType: String,
     company: String,
     dealer: String,
-    otherTags: [String],
+    // otherTags: [String],
   },
   images: [{ type: String, max: 10 }], 
   createdAt: { type: Date, default: Date.now },
