@@ -49,9 +49,9 @@ const CarAdd = () => {
     const data = new FormData();
     data.append("title", formData.title);
     data.append("description", formData.description);
-    data.append("carType", formData.tags.carType);
-    data.append("company", formData.tags.company);
-    data.append("dealer", formData.tags.dealer);
+    data.append("carType", formData.carType);
+    data.append("company", formData.company);
+    data.append("dealer", formData.dealer);
     formData.tags.otherTags.forEach((tag, idx) =>
       data.append(`tags[otherTags][${idx}]`, tag)
     );
@@ -114,8 +114,8 @@ const CarAdd = () => {
         <label className="block text-gray-700  text-richblack-300 font-medium">Car Type</label>
         <input
           type="text"
-          name="tags.carType"
-          value={formData.tags.carType}
+          name="carType"
+          value={formData.carType}
           onChange={handleChange}
           className="w-full border border-gray-300 bg-richblack-800 text-richblack-300 rounded-md p-2 mt-1 focus:outline-none focus:ring-2 focus:ring-richblack-5"
         />
@@ -124,8 +124,8 @@ const CarAdd = () => {
         <label className="block text-gray-700 text-richblack-300 font-medium">Company</label>
         <input
           type="text"
-          name="tags.company"
-          value={formData.tags.company}
+          name="company"
+          value={formData.company}
           onChange={handleChange}
           className="w-full border border-gray-300 bg-richblack-800 text-richblack-300 rounded-md p-2 mt-1 focus:outline-none focus:ring-2 focus:ring-richblack-5"
         />
@@ -134,8 +134,8 @@ const CarAdd = () => {
         <label className="block text-gray-700 text-richblack-300 font-medium">Dealer</label>
         <input
           type="text"
-          name="tags.dealer"
-          value={formData.tags.dealer}
+          name="dealer"
+          value={formData.dealer}
           onChange={handleChange}
           className="w-full border border-gray-300 text-richblack-300 bg-richblack-800 rounded-md p-2 mt-1 focus:outline-none focus:ring-2 focus:ring-richblack-5"
         />

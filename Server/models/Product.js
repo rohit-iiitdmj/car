@@ -4,9 +4,9 @@ const productSchema = new mongoose.Schema({
   userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
   title: { type: String, required: true },
   description: { type: String },
-  carType:{ String},
-  company:{ String},
-  dealer: {String},
+  carType:{ type: String},
+  company:{ type: String},
+  dealer: {type: String},
   tags: {
     otherTags: [String],
     
